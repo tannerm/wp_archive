@@ -229,65 +229,9 @@ then
 	ln -sf /srv/www/wp-cli/bin/wp /usr/local/bin/wp
 fi
 
-# Install and configure the latest stable version of WordPress
-if [ ! -f /home/vagrant/flags/disable_wp_stable ]
-then
-	if [ ! -d /srv/www/wordpress-default ]
-	then
-		printf "Downloading WordPress.....http://wordpress.org\n"
-		cd /srv/www/
-		curl -O http://wordpress.org/latest.tar.gz
-		tar -xvf latest.tar.gz
-		mv wordpress wordpress-default
-		rm latest.tar.gz
-		cp /srv/config/wordpress-config/wp-config-sample.php /srv/www/wordpress-default
-		cd /srv/www/wordpress-default
-		printf "Configuring WordPress...\n"
-		wp core config --dbname=wordpress_default --dbuser=wp --dbpass=wp --quiet
-		wp core install --url=local.wordpress.dev --quiet --title="Local WordPress Dev" --admin_name=admin --admin_email="admin@local.dev" --admin_password="password"
-	else
-		printf "Skip WordPress installation, already available\n"
-	fi
-fi
-
-# Checkout, install and configure WordPress trunk
-if [ ! -f /home/vagrant/flags/disable_wp_trunk ]
-then
-	if [ ! -d /srv/www/wordpress-trunk ]
-	then
-		printf "Checking out WordPress trunk....http://core.svn.wordpress.org/trunk\n"
-		svn checkout http://core.svn.wordpress.org/trunk/ /srv/www/wordpress-trunk
-		cp /srv/config/wordpress-config/wp-config-sample.php /srv/www/wordpress-trunk
-		cd /srv/www/wordpress-trunk
-		printf "Configuring WordPress trunk...\n"
-		wp core config --dbname=wordpress_trunk --dbuser=wp --dbpass=wp --quiet
-		wp core install --url=local.wordpress-trunk.dev --quiet --title="Local WordPress Trunk Dev" --admin_name=admin --admin_email="admin@local.dev" --admin_password="password"
-	else
-		printf "Updating WordPress trunk...\n"
-		cd /srv/www/wordpress-trunk
-		svn up --ignore-externals
-	fi
-fi
-
-# Checkout and configure the WordPress unit tests
-if [ ! -f /home/vagrant/flags/disable_wp_tests ]
-then
-	if [ ! -d /srv/www/wordpress-unit-tests ]
-	then
-		printf "Downloading WordPress Unit Tests.....https://unit-tests.svn.wordpress.org\n"
-		# Must be in a WP directory to run wp
-		cd /srv/www/wordpress-trunk
-		wp core init-tests /srv/www/wordpress-unit-tests --dbname=wordpress_unit_tests --dbuser=wp --dbpass=wp
-	else
-		printf "Updating WordPress unit tests...\n"	
-		cd /srv/www/wordpress-unit-tests
-		svn up --ignore-externals
-	fi
-fi
-
 # Your host IP is set in Vagrantfile, but it's nice to see the interfaces anyway.
 # Enter domains space delimited
-DOMAINS='local.wordpress.dev local.wordpress-trunk.dev'
+DOMAINS='wp-archive.local'
 if ! grep -q "$DOMAINS" /etc/hosts
 then echo "127.0.0.1 $DOMAINS" >> /etc/hosts
 fi
