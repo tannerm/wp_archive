@@ -18,18 +18,17 @@ $b2varstoreset = array('m','p','posts','w','c', 'cat','withcomments','s','search
 	for ($i=0; $i<count($b2varstoreset); $i += 1) {
 		$b2var = $b2varstoreset[$i];
 		if (!isset($$b2var)) {
-			if (empty($HTTP_POST_VARS[$b2var])) {
-				if (empty($HTTP_GET_VARS[$b2var])) {
+			if (empty($_POST[$b2var])) {
+				if (empty($_GET[$b2var])) {
 					$$b2var = '';
 				} else {
-					$$b2var = $HTTP_GET_VARS[$b2var];
+					$$b2var = $_GET[$b2var];
 				}
 			} else {
-				$$b2var = $HTTP_POST_VARS[$b2var];
+				$$b2var = $_POST[$b2var];
 			}
 		}
 	}
-
 
 /* Sending HTTP headers */
 // It is presumptious to think that WP is the only thing that might change on the page.
@@ -58,7 +57,7 @@ $distinct = '';
 
 if ($pagenow != 'b2edit.php') { timer_start(); }
 
-if ($showposts) {
+if (isset($showposts)) {
     $showposts = (int)$showposts;
 	$posts_per_page = $showposts;
 }
@@ -254,10 +253,10 @@ if ($pagenow != 'b2edit.php') {
 }
 $where .= ' AND (post_status = "publish"';
 
+global $user_ID;
 // Get private posts
 if ('' != intval($user_ID)) $where .= " OR post_author = $user_ID AND post_status != 'draft')"; else $where .= ')';
 $request = " SELECT $distinct * FROM $tableposts WHERE 1=1".$where." ORDER BY post_$orderby $limits";
-
 
 if ($preview) {
 	$request = 'SELECT 1-1'; // dummy mysql query for the preview

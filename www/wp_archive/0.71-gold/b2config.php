@@ -11,7 +11,7 @@
 // $blogfilename is the name of the default file for your blog
 // $blogname is the name of your blog
 
-$siteurl = 'wp-archive.local/0.71-gold/'; // Double check this, it's very important.
+$siteurl = 'http://wp-archive.local/0.71-gold/'; // Double check this, it's very important.
 $blogfilename = 'index.php';
 $blogname = "0.71 Gold";
 $blogdescription = "babblings !";
@@ -25,7 +25,7 @@ define('DB_NAME', 'wp_archive_0_71_gold');		// The name of the database
 define('DB_USER', '0_71_gold');		// Your MySQL username
 define('DB_PASSWORD', 'wp_archive_0_71_gold');	// ...and password
 define('DB_HOST', 'localhost');	// 99% chance you won't need to change this value    
-
+ini_set('display_errors', '0');
 
 // If you've finished up to here you should be able to install now.
 
@@ -334,7 +334,7 @@ for ($i = 3; $i < count($url); $i++) {
 $relpath = '/0.71-gold';	//mod
 $abspath =  getenv('DOCUMENT_ROOT') . $relpath . '/';
 $b2inc = "/$b2inc";
-$pathserver = &$siteurl;
-
+$pathserver = $siteurl;
 require_once($abspath.$b2inc.'/wp-db.php');
+
 ?>
