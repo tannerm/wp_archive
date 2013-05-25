@@ -1,9 +1,11 @@
 # WP Archive
-WP Archive is a fun tool built for comparing past and present versions of WordPress. WP Archive uses Vagrant and builds off of  Varying Vagrant Vagrants, I have included the documentation for that below.
+WP Archive is a fun tool built for comparing past and present versions of WordPress. It uses Vagrant and builds off of Varying Vagrant Vagrants (VVV).
 
-There should not be any need to modify and Vagrant files. Just make sure you add a record in your hosts folder pointing wp-archive.local to 192.168.50.4. WP Archive uses a subdirectory structure to house the different WordPress versions on the same domain. Note that some of the earliest versions of WordPress may not function as expected. I am working on resolving deprecated functions, but have not completed.
+There should not be any need to modify any Vagrant files. Just make sure you follow the instructions below for setting up VVV, including adding a record in your hosts file pointing wp-archive.local to 192.168.50.4. WP Archive uses a subdirectory structure to house the different WordPress versions on the same domain, and you can find links to all the versions in the menu of the default installation.
 
-If you want to delete all the WordPress databases so you can start from scratch, you can run cd to the wp_archive directory, run `vagrant ssh`, then run `/vagrant/database/drop-wordpress-databases.sh`
+Note that there may be some broken features or errors here and there, especially in the older versions, but most of it works well in our (limited) testing.
+
+If you want to delete all the WordPress databases so you can start from scratch, you can cd to the `wp_archive` directory, run `vagrant ssh`, then run `/vagrant/database/drop-wordpress-databases.sh`.
 
 # Varying Vagrant Vagrants
 
