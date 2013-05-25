@@ -66,7 +66,7 @@ CREATE TABLE `b2comments` (
 
 LOCK TABLES `b2comments` WRITE;
 /*!40000 ALTER TABLE `b2comments` DISABLE KEYS */;
-INSERT INTO `b2comments` VALUES (1,1,'Mr WordPress','mr@wordpress.org','http://wordpress.org','127.0.0.1','2013-05-25 06:42:05','Hi, this is a comment.<br />To delete a comment, just log in, and view the posts\' comments, there you will have the option to edit or delete them.',0);
+INSERT INTO `b2comments` VALUES (1,1,'Mr WordPress','mr@wordpress.org','http://wordpress.org','127.0.0.1','2013-05-25 17:15:08','Hi, this is a comment.<br />To delete a comment, just log in, and view the posts\' comments, there you will have the option to edit or delete them.',0);
 /*!40000 ALTER TABLE `b2comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,7 +150,7 @@ CREATE TABLE `b2posts` (
   `post_password` varchar(20) NOT NULL DEFAULT '',
   PRIMARY KEY (`ID`),
   KEY `post_status` (`post_status`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,7 +159,7 @@ CREATE TABLE `b2posts` (
 
 LOCK TABLES `b2posts` WRITE;
 /*!40000 ALTER TABLE `b2posts` DISABLE KEYS */;
-INSERT INTO `b2posts` VALUES (1,1,'2013-05-25 06:42:05','Welcome to WordPress. This is the first post. Edit or delete it, then start blogging!','Hello world!',1,'','publish','open','open',''),(2,1,'2013-05-25 06:57:40','Here\\\'s my post','Test',1,'This is an excertp','publish','open','open',''),(3,1,'2013-05-25 18:11:27','<div class=\\\"storycontent\\\">\r\n	<p>We’re very proud to announce the <a href=\\\"/download\\\" title=\\\"Download it now\\\">immediate availability</a> of the 0.71 release of WordPress. Don’t let the small version bump fool you, this release is packed with new features. Without further ado:</p>\r\n<ul>\r\n<li><strong>300% speedup</strong> — We’re not kidding, this release will perform about three times (or more) faster than previous releases of WordPress and b2.</li>\r\n<li><strong>Post status</strong> — Every post can now have three states of being: publish, draft, and private. Publish is just like it was before, drafts are stored in the database and display in a special place on your edit screen, and private entries are viewable only by the author. This allows a degree of flexibility in workflow, allowing different people to work on the same post.</li>\r\n<li><strong>Comments status</strong> — Comments and pings can now be individually enabled or disabled on a per-post basis. The templates reflect this as well.</li>\r\n<li><strong>Combined Trackbacks, Pingbacks, and Comments</strong> — They’re all comments anyway, and now they display as such. This means cleaner templates and less software cruft crowding your beautiful design.</li>\r\n<li><strong>Security fixes</strong> — This release addresses a problem that could potentially allow SQL injection for users of MySQL 4 and above, as well as removes a vulnerable file. (If you overwrite your old installation, make sure to delete <code>links.all.php</code>)</li>\r\n<li><strong>OPML import</strong> — Import links into the link manager from OPML format, including from blogrolling.</li>\r\n<li><strong>ezSQL database functions</strong> — Using <a href=\\\"http://justinvincent.com/home/articles.php?articleId=2\\\" title=\\\"Information about the ezSQL database class\\\">ezSQL</a> has cleaned up the code quite a bit, sped it up a little, and will make it that much easier to add support for other databases beside MySQL in the future.</li>\r\n<li><strong>Cleaner, smoother administration</strong> — We’ve polished up all the administration screens to be even faster and easier to use, particularly the Links Manager.</li>\r\n<li><strong>Clean upgrades</strong> — Upgrading from b2 or a previous version of WordPress is a cinch, and we’re working on upgrade paths for users of other software.</li>\r\n<li><strong>Links weblogs.com checking</strong> — When checking for updated links it is now looser in what it matches so miniscule differences in the URL won’t prevent it from updating.</li>\r\n<li><strong>Bug fixes galore</strong> — Over twenty bugs have been smitten from the code.</li>\r\n</ul>\r\n<p>So upgrade while it’s hot. What better way to spend a slow Monday?</p>\r\n<div class=\\\"sharedaddy sd-sharing-enabled\\\"><div class=\\\"robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing\\\"><h3 class=\\\"sd-title\\\">Share this:</h3><div class=\\\"sd-content\\\"><ul><li class=\\\"share-twitter\\\"><a rel=\\\"nofollow\\\" class=\\\"share-twitter sd-button share-icon\\\" href=\\\"http://wordpress.org/news/2003/06/wordpress-071-now-available/?share=twitter&amp;nb=1\\\" target=\\\"_blank\\\" title=\\\"Click to share on Twitter\\\" id=\\\"sharing-twitter-24\\\"><span>Twitter</span></a></li><li class=\\\"share-facebook\\\"><a rel=\\\"nofollow\\\" class=\\\"share-facebook sd-button share-icon\\\" href=\\\"http://wordpress.org/news/2003/06/wordpress-071-now-available/?share=facebook&amp;nb=1\\\" target=\\\"_blank\\\" title=\\\"Share on Facebook\\\" id=\\\"sharing-facebook-24\\\"><span>Facebook</span></a></li><li class=\\\"share-google-plus-1\\\"><a rel=\\\"nofollow\\\" class=\\\"share-google-plus-1 sd-button share-icon\\\" href=\\\"http://wordpress.org/news/2003/06/wordpress-071-now-available/?share=google-plus-1&amp;nb=1\\\" target=\\\"_blank\\\" title=\\\"Click to share on Google+\\\" id=\\\"sharing-google-24\\\"><span>Google +1</span></a></li><li class=\\\"share-email share-service-visible\\\"><a rel=\\\"nofollow\\\" class=\\\"share-email sd-button share-icon\\\" href=\\\"http://wordpress.org/news/2003/06/wordpress-071-now-available/?share=email&amp;nb=1\\\" target=\\\"_blank\\\" title=\\\"Click to email this to a friend\\\"><span>Email</span></a></li><li class=\\\"share-end\\\"></li></ul><div class=\\\"sharing-clear\\\"></div></div></div></div></div>','WordPress 0.71 Now Available',1,'','publish','open','open','');
+INSERT INTO `b2posts` VALUES (1,1,'2013-05-25 17:15:08','Welcome to WordPress. This is the first post. Edit or delete it, then start blogging!','Hello world!',1,'','publish','open','open','');
 /*!40000 ALTER TABLE `b2posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -230,7 +230,7 @@ CREATE TABLE `b2users` (
 
 LOCK TABLES `b2users` WRITE;
 /*!40000 ALTER TABLE `b2users` DISABLE KEYS */;
-INSERT INTO `b2users` VALUES (1,'admin','c92bbb','','','admin',0,'admin@wp-archive.local','','127.0.0.1','127.0.0.1','','2000-00-00 00:00:01',10,'','','','nickname');
+INSERT INTO `b2users` VALUES (1,'admin','password','','','admin',0,'admin@wp-archive.com','','127.0.0.1','127.0.0.1','','2000-00-00 00:00:01',10,'','','','nickname');
 /*!40000 ALTER TABLE `b2users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -243,4 +243,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-05-25 19:34:53
+-- Dump completed on 2013-05-25 17:28:16
