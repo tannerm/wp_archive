@@ -2,7 +2,7 @@
 *.sublime*
 .DS_Store
 .idea
-
+cache/
 /database/data/
 /.vagrant
 

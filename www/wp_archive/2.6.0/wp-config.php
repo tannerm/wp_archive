@@ -6,6 +6,7 @@ define('DB_PASSWORD', 'wp_archive_2_6_0'); // ...and password
 define('DB_HOST', 'localhost');    // 99% chance you won't need to change this value
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
+ini_set('display_errors', '0');
 
 // Change each KEY to a different unique phrase.  You won't have to remember the phrases later,
 // so make them long and complicated.  You can visit http://api.wordpress.org/secret-key/1.1/

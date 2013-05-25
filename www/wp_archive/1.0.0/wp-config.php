@@ -7,7 +7,7 @@ define('DB_NAME', 'wp_archive_1_0_0');     // The name of the database
 define('DB_USER', 'wp_archive_1_0_0');     // Your MySQL username
 define('DB_PASSWORD', 'wp_archive_1_0_0'); // ...and password
 define('DB_HOST', 'localhost');     // 99% chance you won't need to change this value
-//ini_set('display_errors', '0');
+ini_set('display_errors', '0');
 
 // Change the prefix if you want to have multiple blogs in a single database.
 

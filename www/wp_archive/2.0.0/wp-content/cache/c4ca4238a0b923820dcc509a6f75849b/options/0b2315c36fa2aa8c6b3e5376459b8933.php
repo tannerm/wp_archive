@@ -1,3 +1,3 @@
 <?php
-//s:15:"WordPress 2.0.0";
+//s:18:"WordPress 2.0 Duke";
 ?>
