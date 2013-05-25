@@ -8,17 +8,53 @@ GRANT ALL PRIVILEGES ON `wp_archive`.* TO 'wp_archive'@'localhost' IDENTIFIED BY
 CREATE DATABASE IF NOT EXISTS `wp_archive_3_5_0`;
 GRANT ALL PRIVILEGES ON `wp_archive_3_5_0`.* TO 'wp_archive_3_5_0'@'localhost' IDENTIFIED BY 'wp_archive_3_5_0';
 
+CREATE DATABASE IF NOT EXISTS `wp_archive_3_4_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_3_4_0`.* TO 'wp_archive_3_4_0'@'localhost' IDENTIFIED BY 'wp_archive_3_4_0';
+
+CREATE DATABASE IF NOT EXISTS `wp_archive_3_3_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_3_3_0`.* TO 'wp_archive_3_3_0'@'localhost' IDENTIFIED BY 'wp_archive_3_3_0';
+
+CREATE DATABASE IF NOT EXISTS `wp_archive_3_2_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_3_2_0`.* TO 'wp_archive_3_2_0'@'localhost' IDENTIFIED BY 'wp_archive_3_2_0';
+
+CREATE DATABASE IF NOT EXISTS `wp_archive_3_1_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_3_1_0`.* TO 'wp_archive_3_1_0'@'localhost' IDENTIFIED BY 'wp_archive_3_1_0';
+
 CREATE DATABASE IF NOT EXISTS `wp_archive_3_0_0`;
 GRANT ALL PRIVILEGES ON `wp_archive_3_0_0`.* TO 'wp_archive_3_0_0'@'localhost' IDENTIFIED BY 'wp_archive_3_0_0';
 
+CREATE DATABASE IF NOT EXISTS `wp_archive_2_9_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_2_9_0`.* TO 'wp_archive_2_9_0'@'localhost' IDENTIFIED BY 'wp_archive_2_9_0';
+
+CREATE DATABASE IF NOT EXISTS `wp_archive_2_8_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_2_8_0`.* TO 'wp_archive_2_8_0'@'localhost' IDENTIFIED BY 'wp_archive_2_8_0';
+
+CREATE DATABASE IF NOT EXISTS `wp_archive_2_7_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_2_7_0`.* TO 'wp_archive_2_7_0'@'localhost' IDENTIFIED BY 'wp_archive_2_7_0';
+
+CREATE DATABASE IF NOT EXISTS `wp_archive_2_6_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_2_6_0`.* TO 'wp_archive_2_6_0'@'localhost' IDENTIFIED BY 'wp_archive_2_6_0';
+
 CREATE DATABASE IF NOT EXISTS `wp_archive_2_5_0`;
 GRANT ALL PRIVILEGES ON `wp_archive_2_5_0`.* TO 'wp_archive_2_5_0'@'localhost' IDENTIFIED BY 'wp_archive_2_5_0';
+
+CREATE DATABASE IF NOT EXISTS `wp_archive_2_3_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_2_3_0`.* TO 'wp_archive_2_3_0'@'localhost' IDENTIFIED BY 'wp_archive_2_3_0';
+
+CREATE DATABASE IF NOT EXISTS `wp_archive_2_2_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_2_2_0`.* TO 'wp_archive_2_2_0'@'localhost' IDENTIFIED BY 'wp_archive_2_2_0';
+
+CREATE DATABASE IF NOT EXISTS `wp_archive_2_1_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_2_1_0`.* TO 'wp_archive_2_1_0'@'localhost' IDENTIFIED BY 'wp_archive_2_1_0';
 
 CREATE DATABASE IF NOT EXISTS `wp_archive_2_0_0`;
 GRANT ALL PRIVILEGES ON `wp_archive_2_0_0`.* TO 'wp_archive_2_0_0'@'localhost' IDENTIFIED BY 'wp_archive_2_0_0';
 
 CREATE DATABASE IF NOT EXISTS `wp_archive_1_5_0`;
 GRANT ALL PRIVILEGES ON `wp_archive_1_5_0`.* TO 'wp_archive_1_5_0'@'localhost' IDENTIFIED BY 'wp_archive_1_5_0';
+
+CREATE DATABASE IF NOT EXISTS `wp_archive_1_2_0`;
+GRANT ALL PRIVILEGES ON `wp_archive_1_2_0`.* TO 'wp_archive_1_2_0'@'localhost' IDENTIFIED BY 'wp_archive_1_2_0';
 
 CREATE DATABASE IF NOT EXISTS `wp_archive_1_0_0`;
 GRANT ALL PRIVILEGES ON `wp_archive_1_0_0`.* TO 'wp_archive_1_0_0'@'localhost' IDENTIFIED BY 'wp_archive_1_0_0';

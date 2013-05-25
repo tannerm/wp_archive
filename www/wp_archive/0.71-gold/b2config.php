@@ -334,7 +334,7 @@ for ($i = 3; $i < count($url); $i++) {
 $relpath = '/0.71-gold';	//mod
 $abspath =  getenv('DOCUMENT_ROOT') . $relpath . '/';
 $b2inc = "/$b2inc";
-$pathserver = $siteurl;
+$pathserver = &$siteurl;
 require_once($abspath.$b2inc.'/wp-db.php');
 
 ?>

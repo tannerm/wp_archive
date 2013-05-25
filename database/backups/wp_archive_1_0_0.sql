@@ -297,7 +297,7 @@ CREATE TABLE `wp_post2cat` (
   `category_id` int(11) NOT NULL,
   PRIMARY KEY (`rel_id`),
   KEY `post_id` (`post_id`,`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -306,7 +306,7 @@ CREATE TABLE `wp_post2cat` (
 
 LOCK TABLES `wp_post2cat` WRITE;
 /*!40000 ALTER TABLE `wp_post2cat` DISABLE KEYS */;
-INSERT INTO `wp_post2cat` VALUES (1,1,1);
+INSERT INTO `wp_post2cat` VALUES (1,1,1),(2,2,1),(3,3,1);
 /*!40000 ALTER TABLE `wp_post2cat` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -339,7 +339,7 @@ CREATE TABLE `wp_posts` (
   PRIMARY KEY (`ID`),
   KEY `post_status` (`post_status`),
   KEY `post_name` (`post_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -348,7 +348,7 @@ CREATE TABLE `wp_posts` (
 
 LOCK TABLES `wp_posts` WRITE;
 /*!40000 ALTER TABLE `wp_posts` DISABLE KEYS */;
-INSERT INTO `wp_posts` VALUES (1,1,'2013-05-24 08:09:06','Welcome to WordPress. This is the first post. Edit or delete it, then start blogging!','Hello world!',1,'',NULL,NULL,'publish','open','open','','hello-world','','','0000-00-00 00:00:00','');
+INSERT INTO `wp_posts` VALUES (1,1,'2013-05-24 08:09:06','Welcome to WordPress. This is the first post. Edit or delete it, then start blogging!','Hello world!',1,'',NULL,NULL,'publish','open','open','','hello-world','','','0000-00-00 00:00:00',''),(2,1,'2013-05-25 07:07:58','This is a test post','Test',0,'',NULL,NULL,'publish','','','','test','','','0000-00-00 00:00:00',''),(3,1,'2013-05-25 18:09:47','<div class=\\\"storycontent\\\">\r\n	<p>I am proud to announce that WordPress 1.0 is <a href=\\\"http://wordpress.org/download/\\\">now available</a>. As the version number indicates, this is a major step for us and a great deal of effort has gone into it.</p>\r\n<dl>\r\n<dt>Search engine friendly permalinks</dt>\r\n<dd>You may now structure your permalinks in a manner that is not only more meaningful, semantic, and \\\"cruft-free,\\\" but also friendlier to search engines. And all it takes is <a href=\\\"http://wordpress.org/development/archives/67/\\\">three steps</a>. A common server module called <code>mod_rewrite</code> is currently required for this functionality. </dd>\r\n<dt>Multiple Categories </dt>\r\n<dd>WordPress now supports true multiple categories per post. This means that you could have one post in twenty different categories, if you wanted. Categories  also now have a nice URI such as <code>/category/category-name</code> if you have the new permalink option enabled. </dd>\r\n<dt>Dead simple installation and upgrade</dt>\r\n<dd>One of the things we most frequently receive feedback about is how easy our installation process is. Well, it got easier. The one configuration file you have to edit, <code>wp-config.php</code>, is now able to be set up through the browser. If you don&#8217;t have the proper permissions for that, we have improved instructions to make everything easy for you. Also vastly improved is our new <strong>intelligent upgrade code</strong>. If you&#8217;re upgrading from any previous version of WordPress you can just run <code>upgrade.php</code> and it will intelligently update the database.</dd>\r\n<dt>Comment moderation</dt>\r\n<dd>You can now set up comments to be approved before they are displayed on your main site. This in addition to the control you have over whether comments are open or closed from previous versions. We&#8217;ve made this system very easy to use and edit hundreds of comments at a time.</dd>\r\n<dt><a href=\\\"http://gmpg.org/xfn/\\\">XFN</a> Support</dt>\r\n<dd>XFN is a simple way to reperesent human relationships in hyperlinks. WordPress now allows editing of <code>rel</code> values through an easy interface very similar to the <a href=\\\"http://gmpg.org/xfn/creator\\\">XFN Creator</a>. </dd>\r\n<dt>Atom Support</dt>\r\n<dd>WordPress 1.0 supports Atom .3 syndication and auto-discovery.</dd>\r\n<dt>Edit this page/comment</dt>\r\n<dd>There is a new template tag (included in the new default template) that shows an link directly to the admin page for editing a post or comment but only if you have the permission to edit it. This means it makes easy for you, but your site visitors never see it.</dd>\r\n<dt>Major admin interface changes</dt>\r\n<dd>\r\n<dl>\r\n<dt>Ping/TrackBack on edit</dt>\r\n<dt>New, faster posting interface</dt>\r\n<dt>Create users from admin page </dt>\r\n</dl>\r\n</dd>\r\n<dt>Cleaned up structure and naming scheme</dt>\r\n<dd>WordPress now has a consistent and future-minded naming scheme that has cleaned up the file and directory structure considerably.</dd>\r\n<dt>New OPML import support </dt>\r\n<dd>You can now import OPML files from blogrolling.com or blo.gs.</dd>\r\n<dt>Store XML feed URIs with your links</dt>\r\n<dd>Associate an XML feed with any link, which may later be used for integrated aggregator functionality.</dd>\r\n<dt>Trackback on edit</dt>\r\n<dd>You can now send trackback pings when editing a post.</dd>\r\n<dt>Additional template tags</dt>\r\n<dd>We&#8217;ve added a few template tags for addressing the new fields, such as author and category descriptions, link XML links, et cetera.</dd>\r\n<dt>Movable Type and Textpattern import tools</dt>\r\n<dd>You can now easily upgrade to WordPress from any of the following tools: Blogger, Movable Type, Textpattern, b2, and Greymatter. Just run the proper import script in your <code>wp-admin</code> directory and you&#8217;re good to go.</dd>\r\n</dl>\r\n<div class=\\\"sharedaddy sd-sharing-enabled\\\"><div class=\\\"robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing\\\"><h3 class=\\\"sd-title\\\">Share this:</h3><div class=\\\"sd-content\\\"><ul><li class=\\\"share-twitter\\\"><a rel=\\\"nofollow\\\" class=\\\"share-twitter sd-button share-icon\\\" href=\\\"http://wordpress.org/news/2004/01/wordpress-10/?share=twitter&amp;nb=1\\\" target=\\\"_blank\\\" title=\\\"Click to share on Twitter\\\" id=\\\"sharing-twitter-65\\\"><span>Twitter</span></a></li><li class=\\\"share-facebook\\\"><a rel=\\\"nofollow\\\" class=\\\"share-facebook sd-button share-icon\\\" href=\\\"http://wordpress.org/news/2004/01/wordpress-10/?share=facebook&amp;nb=1\\\" target=\\\"_blank\\\" title=\\\"Share on Facebook\\\" id=\\\"sharing-facebook-65\\\"><span>Facebook</span></a></li><li class=\\\"share-google-plus-1\\\"><a rel=\\\"nofollow\\\" class=\\\"share-google-plus-1 sd-button share-icon\\\" href=\\\"http://wordpress.org/news/2004/01/wordpress-10/?share=google-plus-1&amp;nb=1\\\" target=\\\"_blank\\\" title=\\\"Click to share on Google+\\\" id=\\\"sharing-google-65\\\"><span>Google +1</span></a></li><li class=\\\"share-email share-service-visible\\\"><a rel=\\\"nofollow\\\" class=\\\"share-email sd-button share-icon\\\" href=\\\"http://wordpress.org/news/2004/01/wordpress-10/?share=email&amp;nb=1\\\" target=\\\"_blank\\\" title=\\\"Click to email this to a friend\\\"><span>Email</span></a></li><li class=\\\"share-end\\\"></li></ul><div class=\\\"sharing-clear\\\"></div></div></div></div></div>','WordPress 1.0',0,'',NULL,NULL,'publish','','','','wordpress-10','','','0000-00-00 00:00:00','');
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -403,4 +403,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-05-24  8:54:58
+-- Dump completed on 2013-05-25 19:35:28

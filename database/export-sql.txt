@@ -1,0 +1,21 @@
+mysqldump -u root -pblank wp_archive > wp_archive.sql
+mysqldump -u root -pblank wp_archive_3_5_0 > wp_archive_3_5_0.sql
+mysqldump -u root -pblank wp_archive_3_4_0 > wp_archive_3_4_0.sql
+mysqldump -u root -pblank wp_archive_3_3_0 > wp_archive_3_3_0.sql
+mysqldump -u root -pblank wp_archive_3_2_0 > wp_archive_3_2_0.sql
+mysqldump -u root -pblank wp_archive_3_1_0 > wp_archive_3_1_0.sql
+mysqldump -u root -pblank wp_archive_3_0_0 > wp_archive_3_0_0.sql
+mysqldump -u root -pblank wp_archive_2_9_0 > wp_archive_2_9_0.sql
+mysqldump -u root -pblank wp_archive_2_8_0 > wp_archive_2_8_0.sql
+mysqldump -u root -pblank wp_archive_2_7_0 > wp_archive_2_7_0.sql
+mysqldump -u root -pblank wp_archive_2_6_0 > wp_archive_2_6_0.sql
+mysqldump -u root -pblank wp_archive_2_5_0 > wp_archive_2_5_0.sql
+mysqldump -u root -pblank wp_archive_2_3_0 > wp_archive_2_3_0.sql
+mysqldump -u root -pblank wp_archive_2_2_0 > wp_archive_2_2_0.sql
+mysqldump -u root -pblank wp_archive_2_1_0 > wp_archive_2_1_0.sql
+mysqldump -u root -pblank wp_archive_2_0_0 > wp_archive_2_0_0.sql
+mysqldump -u root -pblank wp_archive_1_5_0 > wp_archive_1_5_0.sql
+mysqldump -u root -pblank wp_archive_1_2_0 > wp_archive_1_2_0.sql
+mysqldump -u root -pblank wp_archive_1_0_0 > wp_archive_1_0_0.sql
+mysqldump -u root -pblank wp_archive_0_71_gold > wp_archive_0_71_gold.sql
+
