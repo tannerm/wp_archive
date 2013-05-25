@@ -2,7 +2,7 @@
 $_wp_installing = 1;
 if (file_exists('../wp-config.php')) die("The file 'wp-config.php already exists. If you need to reset any of the configuration items in this file, please delete it first.");
 
-$step = $HTTP_GET_VARS['step'];
+$step = $_GET['step'];
 if (!$step) $step = 0;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -96,11 +96,11 @@ switch($step) {
 	break;
 	
 	case 2:
-	$dbname = $HTTP_POST_VARS['dbname'];
-    $uname = $HTTP_POST_VARS['uname'];
-    $passwrd = $HTTP_POST_VARS['pwd'];
-    $dbhost = $HTTP_POST_VARS['dbhost'];
-	$prefix = $HTTP_POST_VARS['prefix'];
+	$dbname = $_POST['dbname'];
+    $uname = $_POST['uname'];
+    $passwrd = $_POST['pwd'];
+    $dbhost = $_POST['dbhost'];
+	$prefix = $_POST['prefix'];
 	if (empty($prefix)) $prefix = 'wp_';
     
 	if (!file_exists('../wp-config-sample.php'))

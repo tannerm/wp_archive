@@ -33,7 +33,7 @@ foreach ($posts as $post) { start_wp();
 // this line is WordPress' motor, do not delete it.
 $comments = $wpdb->get_results("SELECT * FROM $tablecomments WHERE comment_post_ID = $id AND comment_approved = '1' ORDER BY comment_date");
 $commentstatus = $wpdb->get_row("SELECT comment_status, post_password FROM $tableposts WHERE ID = $id");
-if (!empty($commentstatus->post_password) && $HTTP_COOKIE_VARS['wp-postpass_'.$cookiehash] != $commentstatus->post_password) {  // and it doesn't match the cookie
+if (!empty($commentstatus->post_password) && $_COOKIE['wp-postpass_'.$cookiehash] != $commentstatus->post_password) {  // and it doesn't match the cookie
 	echo(get_the_password_form());
 } else { ?>
 

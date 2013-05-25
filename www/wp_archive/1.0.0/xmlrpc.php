@@ -1810,7 +1810,7 @@ function pingback_ping($m) {
 	// original code by Mort (http://mort.mine.nu:8080) 
 	global $tableposts,$tablecomments, $comments_notify, $wpdb; 
 	global $siteurl, $blogfilename,$wp_version, $use_pingback; 
-	global $HTTP_SERVER_VARS, $wpdb;
+	global $_SERVER, $wpdb;
 
 	    
 	if (!$use_pingback) {
