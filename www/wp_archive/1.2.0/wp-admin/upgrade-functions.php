@@ -702,7 +702,7 @@ function upgrade_110() {
 	// Convert passwords to MD5 and update table appropiately
 	$query = 'DESCRIBE '.$tableusers.' user_pass';
 	$res = $wpdb->get_results($query);
-	if ($res[0]['Type'] != 'varchar(32)') {
+	if ($res[0]->Type != 'varchar(32)') {
 		$wpdb->query('ALTER TABLE '.$tableusers.' MODIFY user_pass varchar(64) not null');
 	}
 	
