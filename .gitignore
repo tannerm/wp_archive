@@ -10,6 +10,10 @@ www/wordpress-default/
 www/wordpress-trunk/
 www/wp-cli/
 
+wp-content
+!wp-content/plugins
+!wp-content/themes
+
 # This is a file intended for hooking in a custom Vagrant configuration on up
 /Customfile
 
